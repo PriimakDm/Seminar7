@@ -5,10 +5,6 @@ double [,] Create2DArrey ()
     int userRows = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Enter count of collumns: ");
     int userColls = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Enter min possible value: ");
-    double userMin = Convert.ToDouble(Console.ReadLine());
-    Console.WriteLine("Enter max possible value: ");
-    double userMax = Convert.ToDouble(Console.ReadLine());
 
     double [,] created2DArrey = new double [userRows, userColls];
 
@@ -16,7 +12,7 @@ double [,] Create2DArrey ()
     {
         for (int j = 0; j < userColls; j++)
         {
-            created2DArrey[i,j] = new Random().NextDouble() * 100;
+            created2DArrey[i,j] = Convert.ToDouble(new Random().Next(-100, 100)) / 10;
         }
     }
     return created2DArrey;
